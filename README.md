@@ -1,16 +1,85 @@
-# React + Vite
+Registro de Usuarios en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación simple de registro de usuarios hecha con React. No es un CRUD completo, únicamente permite registrar usuarios y manejar el estado del formulario.
 
-Currently, two official plugins are available:
+Funcionalidad
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Formulario con campos:
 
-## React Compiler
+Nombre
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Email
 
-## Expanding the ESLint configuration
+Validación básica:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+No permite enviar campos vacíos
+
+Al enviar el formulario:
+
+Se agrega el usuario al estado
+
+Se limpia el formulario
+
+Uso de componentes separados
+
+Tecnologías usadas
+
+React
+
+Hooks:
+
+useState
+
+useEffect
+
+useRef
+
+CSS básico para estilos
+
+Estructura del proyecto
+src/
+│
+├── components/
+│   └── UserForm.jsx
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+
+Componentes principales
+UserForm
+
+Maneja el estado del formulario
+
+Controla los inputs con useState
+
+Envía los datos al componente padre mediante props
+
+App
+
+Almacena la lista de usuarios
+
+Genera IDs únicos usando useRef
+
+Maneja la lógica para agregar nuevos usuarios
+
+Instalación y ejecución
+
+Clonar el repositorio
+
+Instalar dependencias:
+
+npm install
+
+
+Ejecutar el proyecto:
+
+npm run dev
+
+Notas
+
+No hay persistencia de datos
+
+Los usuarios solo viven en memoria
+
+Proyecto pensado como práctica de React y manejo de formularios
